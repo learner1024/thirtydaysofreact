@@ -7,13 +7,16 @@ class Content extends React.Component{
 
                 <div className="item">
                     <div className="avatar">
-                        <img src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
+                        <img src={activity.user.avatar} />
                         Doug
                     </div>
                     <span className="time">
                         {activity.timestamp}
                     </span>
                     <p>{activity.text}</p>
+                    <div className="commentCount">
+                        {activity.comments.length}
+                    </div>
                 </div>
                 {/*<div className="item">
                     <div className="avatar">
