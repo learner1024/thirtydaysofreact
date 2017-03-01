@@ -1,5 +1,18 @@
 class Header extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            searchInvisible: true
+        };
+    }
     render(){
+        let searchInputCssClasses = ["searchInput"];
+
+        if(this.state.searchInvisible){
+            searchInputCssClasses.push("inactive");
+        }
+
         return (
         <div className="header">
             <div className="menuIcon">
@@ -10,10 +23,16 @@ class Header extends React.Component{
             <span className="title">{this.props.title}</span>
             <input
                 type="text"
-                className="searchInput"
+                className={searchInputCssClasses.join(" ")}
                 placeholder="Search ..." />
-            <div className="fa fa-search searchIcon"></div>
+            <div onClick={this.toggleSearch.bind(this)} className="fa fa-search searchIcon"></div>
         </div>
         );
+    }
+
+    toggleSearch(){
+        this.setState({
+            searchInvisible: !this.state.searchInvisible
+        });
     }
 }

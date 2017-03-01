@@ -2,8 +2,7 @@ class DigitalClock extends React.Component{
     constructor(props){
         super(props);
 
-        //initial state
-        
+        //initial state        
         this.state = this.getStateObj();
 
         setInterval(this.updateState.bind(this), 1000);
