@@ -11,12 +11,21 @@ class App extends React.Component{
             comments: [
                 {from: "Ari", text: "Me too!"}
             ]
-        }
+        };
+        const activity2 = {
+            timestamp: new Date().getTime(),
+            text: "Woke up early for a beautiful run",
+            user: {
+                id: 2, name: 'Ari',
+                avatar: "http://www.croop.cl/UI/twitter/images/doug.jpg"
+            },
+            comments: [{ from: 'Nate', text: 'I am so jealous' }]
+        };
         return (
             <div className="notificationsFrame">
                 <div className="panel">
                     <Header title="timeline" />
-                    <Content activity={activity1} />
+                    <Content activities={[activity1, activity2]} />
                 </div>
             </div>
         );
