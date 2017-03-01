@@ -1,19 +1,21 @@
 class Content extends React.Component{
     render(){
+        const {activity} = this.props;
         return (
             <div className="content">
                 <div className="line"></div>
+
                 <div className="item">
                     <div className="avatar">
                         <img src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
                         Doug
                     </div>
                     <span className="time">
-                        An hour ago
+                        {activity.timestamp}
                     </span>
-                    <p>Ate lunch</p>
+                    <p>{activity.text}</p>
                 </div>
-                <div className="item">
+                {/*<div className="item">
                     <div className="avatar">
                         <img src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
                     </div>
@@ -36,7 +38,7 @@ class Content extends React.Component{
                     <p>Lorem Ipsum has been the industry's standard dummy
                     text ever since the 1500s, when an unknown printer took a galley of
                     type and scrambled it to make a type specimen book.</p>
-                </div>
+                </div>*/}
             </div>
         );
     }
