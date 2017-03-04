@@ -1,3 +1,12 @@
+var TodoListItem = React.createClass({
+    displayName: "TodoListItem",
+    render: function(){
+        return (
+            <div>{this.props.todo.todo}</div>
+        )
+    }
+})
+
 var TodosList = React.createClass({
     displayName: "TodosList",
     todoItemClick: function(t){
