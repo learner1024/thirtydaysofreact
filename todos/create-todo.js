@@ -1,8 +1,11 @@
 const CreateTodo = React.createClass({
     displayName: "CreateTodo",
     createTodo: function(){
-        const todoText = this.refs.todoText.value;
-        this.props.onCreateTodo(todoText);
+        const todoText = this.refs.todoText.value.trim();
+        if(todoText !== "")
+        {
+            this.props.onCreateTodo(todoText);
+        }        
         this.refs.todoText.value = "";
     },
     render: function(){
