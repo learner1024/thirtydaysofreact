@@ -4,7 +4,7 @@ var TodosList = React.createClass({
         this.props.onTodoClick(t)
     },
     renderTodoItem: function(t, i){
-        return (<li onClick={this.todoItemClick.bind(this, i)} key={i}>{t.status} - {t.todo}</li>)
+        return (<li className={t.status} onClick={this.todoItemClick.bind(this, i)} key={i}>{t.todo}</li>)
     },
     render: function(){
         return (
