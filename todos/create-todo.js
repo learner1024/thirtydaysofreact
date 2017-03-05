@@ -9,6 +9,7 @@ const CreateTodo = React.createClass({
         this.refs.todoText.value = "";
     },
     render: function(){
+        console.log("being rendered: create-todos.js")
         return (
             <div className="create-todo">
                 <input type="text" ref="todoText" />

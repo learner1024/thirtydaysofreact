@@ -38,6 +38,7 @@ const Todos = React.createClass({
         }
     },    
     render: function(){
+        console.log("being rendered: todos.js")
         return (
             <div className="todos">
                 <CreateTodo onCreateTodo={this.addTodo} />

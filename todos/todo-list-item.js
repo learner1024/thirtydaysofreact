@@ -28,6 +28,7 @@ var TodoListItem = React.createClass({
         this.props.onRenameTodo2(this.props.index, this.refs.changedTodoVal.value);
     },
     render: function(){
+        console.log("being rendered: todos-list-item.js")
         if(this.state.editMode === true){
             return (
                 <div>

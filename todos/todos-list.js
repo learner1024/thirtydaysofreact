@@ -8,6 +8,7 @@ var TodosList = React.createClass({
         )
     },
     render: function(){
+        console.log("being rendered: todos-list.js")
         return (   
 
             <ul>{this.props.todos.map(this.renderTodoItem)}</ul>
