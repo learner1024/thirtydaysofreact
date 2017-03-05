@@ -1,6 +1,6 @@
-li.todo{
+span.todo{
     text-decoration: none;
 }
-li.done{
+span.done{
     text-decoration: line-through;
 }
